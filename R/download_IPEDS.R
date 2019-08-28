@@ -80,7 +80,8 @@ download_ipeds <-
       for (i in 1:length(db)) {
         db[[i]] <- get(names(db)[i])
       }
-      save(db, file = paste0(dir, '/', 'IPEDS', year, '.Rda'))
+      year.str <- getYearString(year)
+      save(db, file = paste0(dir, '/', 'IPEDS', year.str, '.Rda'))
     }
     else {
       # Non-Windows platforms start here
