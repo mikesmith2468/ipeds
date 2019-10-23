@@ -16,7 +16,6 @@ getYearString <- function(year) {
 #' @param surveyId the survey ID from the data(surveys) data.frame.
 #' @param year the IPEDS release year.
 formatYear <- function(surveyId, year) {
-	data('surveys', envir = environment())
 	s = surveys[which(surveys$SurveyID==surveyId),]
 	if(s['YearFormat'] == 4) {
 		year = as.character(year)
